@@ -20,21 +20,21 @@ defineProps({
           <div class="sm:col-span-3">
             <div class="label">First name</div>
             <div class="mt-2">
-              {{ user.firstName }}
+              <p>{{ user.firstName }}</p>
             </div>
           </div>
 
           <div class="sm:col-span-3">
             <div class="label">Last name</div>
             <div class="mt-2">
-              {{ user.lastName }}
+              <p>{{ user.lastName }}</p>
             </div>
           </div>
 
           <div class="sm:col-span-4">
             <div class="label">Email address</div>
             <div class="mt-2">
-              {{ user.email }}
+              <p>{{ user.email }}</p>
             </div>
           </div>
 
@@ -48,7 +48,7 @@ defineProps({
           <div class="col-span-full">
             <div class="label">About</div>
             <div class="mt-2">
-              {{ user.about }}
+              <p>{{ user.about }}</p>
             </div>
           </div>
         </div>
