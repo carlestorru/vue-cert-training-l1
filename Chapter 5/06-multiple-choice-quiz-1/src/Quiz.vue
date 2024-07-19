@@ -94,6 +94,6 @@ function nextQuestion() {
 		</div>
 	</div>
 	<div v-else class="text-4xl">
-		Your final score is {{ score }} out of {{ questions.length }}
+		<p>Your final score is {{ score }} out of {{ questions.length }}</p>
 	</div>
 </template>
