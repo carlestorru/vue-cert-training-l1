@@ -1,26 +1,15 @@
 <script setup>
 import { ref, unref } from 'vue';
 
-const emit = defineEmits(['update']);
+const model = defineModel();
 
-const props = defineProps({
-	user: {
-		type: Object,
-		required: true,
-	},
-});
-const user = ref(props.user);
+const newUserInfo = ref({ ...unref(model) });
 
-const newUserInfo = ref({ ...props.user });
-
-const update = () => {
-	const userUpdated = { ...unref(newUserInfo) };
-	user.value = userUpdated;
-	emit('update', userUpdated);
-};
-
+function update() {
+	model.value = { ...unref(newUserInfo) };
+}
 function cancelForm() {
-	newUserInfo.value = { ...user.value };
+	newUserInfo.value = { ...unref(model) };
 }
 </script>
 
